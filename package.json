@@ -8,5 +8,12 @@
     "name": "Ragnar Þór Valgeirsson",
     "email": "ragnar.valgeirsson@gmail.com",
     "url": "http://rthor.is"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-compass": "~0.2.0",
+    "grunt-contrib-watch": "~0.4.3",
+    "matchdep": "~0.1.2",
+    "grunt-contrib-livereload": "~0.1.2"
   }
 }
