@@ -1,12 +1,12 @@
 {
-  "name": "Reload-Sass",
+  "name": "frontend-automation",
   "version": "0.0.0",
   "description": "Frontend automation ftw!",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": "",
-  "author": "",
-  "license": "BSD"
+  "license": "MIT",
+  "homepage": "http://github.com/rthor/frontend-automation",
+  "author": {
+    "name": "Ragnar Þór Valgeirsson",
+    "email": "ragnar.valgeirsson@gmail.com",
+    "url": "http://rthor.is"
+  }
 }
