@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     watch: {
       compass: {
         files: ['sass/**/*.{scss,sass}'],
-        tasks: ['compass']
+        tasks: ['compass:dev']
       },
       livereload: {
         files: ['css/*'],
@@ -16,14 +16,23 @@ module.exports = function(grunt) {
     },
 
    compass: {
-      dist: {
+      dev: {
         options: {
           config: 'config.rb',
           force: true
+        }
+      },
+
+      dist: {
+        options: {
+          config: 'config.rb',
+          force: true,
+          outputStyle: 'compressed'
         }
       }
     }
   });
 
   grunt.registerTask('default', ['watch']);
+  grunt.registerTask('dist', ['compass:dist']);
 };
