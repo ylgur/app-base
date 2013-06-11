@@ -5,11 +5,16 @@
 
 // Authored Dependencies
 // ========================================================================
+@import "global/grid";
 @import "global/colors";
 @import "global/mixins";
 
 // Modules
 // ========================================================================
+@import "modules/typography";
 
 // Sections
 // ========================================================================
+@import "sections/structure";
+@import "sections/header";
+@import "sections/footer";

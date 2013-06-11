@@ -2,13 +2,13 @@
 // ========================================================================
 @mixin bp($point) {
 	@if $point == superman {
-		@media (max-width: 1250px) { @content; }
+		@media (min-width: $superman) { @content; }
 	}
 	@else if $point == batman {
-		@media (max-width: 960px) { @content; }
+		@media (min-width: $batman) { @content; }
 	}
 	@else if $point == robin {
-		@media (max-width: 650px)  { @content; }
+		@media (min-width: $robin)  { @content; }
 	}
 }
 
@@ -85,6 +85,22 @@
 	    width: 0;
 	    height: 150%;
 	}
+}
+
+// Container
+// ========================================================================
+@mixin container-dc {
+	width: 100%;
+	padding: 0 10px;
+
+	@include bp(robin) {
+		width: 650px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	@include bp(batman) { width: 940px; }
+	@include bp(superman) { width: 1250px; }
 }
 
 // Text Overflow

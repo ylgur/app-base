@@ -1,0 +1,26 @@
+// Use the Susy frameork
+@import "susy";
+
+// border-box-sizing()
+@include border-box-sizing;
+
+// Sizes
+$robin: 650px;
+$batman: 960px;
+$superman: 1250px;
+
+//this is the default number of columns
+$total-columns: 8;
+
+//width of each column
+$column-width: 60px;
+
+//space between columns
+$gutter-width: 20px;
+
+//space on the right and left of the grid
+$grid-padding: $gutter-width;
+
+//alternative layout breakpoints
+$tablet: $robin;
+$computer: 12;
