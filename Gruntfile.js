@@ -32,6 +32,14 @@ module.exports = function(grunt) {
       }
     },
 
+    uglify: {
+      build: {
+        files: {
+          'js/build.js': ['js/*.js']
+        }
+      }
+    },
+
     imagemin: {
       dist: {
         files: [{
@@ -54,6 +62,7 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['watch']);
   grunt.registerTask('dist', [
     'compass:dist',
+    'uglify',
     'imagemin',
     'svgmin'
   ]);
