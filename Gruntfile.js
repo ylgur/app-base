@@ -30,9 +30,31 @@ module.exports = function(grunt) {
           outputStyle: 'compressed'
         }
       }
+    },
+
+    imagemin: {
+      dist: {
+        files: [{
+          expand: true,
+          src: 'img/{,*/}*.{png,jpg,jpeg}'
+        }]
+      }
+    },
+
+    svgmin: {
+      dist: {
+        files: [{
+          expand: true,
+          src: 'img/{,*/}*.svg'
+        }]
+      }
     }
   });
 
   grunt.registerTask('default', ['watch']);
-  grunt.registerTask('dist', ['compass:dist']);
+  grunt.registerTask('dist', [
+    'compass:dist',
+    'imagemin',
+    'svgmin'
+  ]);
 };
