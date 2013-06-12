@@ -11,6 +11,10 @@ Clone the project to your public folder. Then do
 
 	$ grunt
 
+And of course when development is done and the code is distribution ready, do:
+
+	$ grunt dist
+
 Get in touch
 ------------
 
