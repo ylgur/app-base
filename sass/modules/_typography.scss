@@ -9,6 +9,14 @@ body {
 	line-height: $baseLH;
 }
 
+a {
+	color: $linkColor;
+
+	&:hover {
+		color: $linkColorHover;
+	}
+}
+
 @for $i from 1 through 6 {
 	h#{$i} {
 		font-size: 48px - ($i * 4);
