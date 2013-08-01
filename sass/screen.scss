@@ -1,10 +1,10 @@
 // Vendor Dependencies
 // ========================================================================
 @import "compass";
-@import "compass/reset";
 
 // Authored Dependencies
 // ========================================================================
+@import "global/normalize";
 @import "global/variables";
 @import "global/susy-base";
 @import "global/fonts";
