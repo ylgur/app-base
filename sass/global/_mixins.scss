@@ -87,22 +87,6 @@
 	}
 }
 
-// Container
-// ========================================================================
-@mixin container-dc {
-	width: 100%;
-	padding: 0 10px;
-
-	@include bp(robin) {
-		width: 650px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	@include bp(batman) { width: 940px; }
-	@include bp(superman) { width: 1250px; }
-}
-
 // Text Overflow
 // ========================================================================
 %text-truncate {

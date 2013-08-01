@@ -3,6 +3,12 @@
 | Typography
 |--------------------------------------------------------------------------
 */
+body {
+	font-family: $baseFF;
+	font-size: $baseFZ;
+	line-height: $baseLH;
+}
+
 @for $i from 1 through 6 {
 	h#{$i} {
 		font-size: 48px - ($i * 4);

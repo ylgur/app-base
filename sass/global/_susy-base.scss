@@ -1,13 +1,11 @@
-// Use the Susy frameork
 @import "susy";
+
+@viewport {
+  width: device-width;
+}
 
 // border-box-sizing()
 @include border-box-sizing;
-
-// Sizes
-$robin: 650px;
-$batman: 960px;
-$superman: 1250px;
 
 //this is the default number of columns
 $total-columns: 8;

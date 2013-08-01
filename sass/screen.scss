@@ -5,8 +5,9 @@
 
 // Authored Dependencies
 // ========================================================================
-@import "global/grid";
-@import "global/colors";
+@import "global/variables";
+@import "global/susy-base";
+@import "global/fonts";
 @import "global/mixins";
 
 // Modules

@@ -1,0 +1,46 @@
+// Sizes
+// ===================================================================
+$robin: 650px;
+$batman: 960px;
+$superman: 1250px;
+
+// Grays
+// ===================================================================
+$black:                 #000;
+$grayDarker:            #222;
+$grayDark:              #666;
+$gray:                  #bbb;
+$grayLight:             #bbb;
+$grayLighter:           #eee;
+$white:                 #fff;
+
+// Accent colors
+// ===================================================================
+$blue:                  #049cdb;
+$blueDark:              #0064cd;
+$green:                 #46a546;
+$red:                   #9d261d;
+$yellow:                #ffc40d;
+$orange:                #f89406;
+$brown:                 #593c0c;
+$pink:                  #c3325f;
+$purple:                #7a43b6;
+
+// Scaffolding
+// ===================================================================
+$bodyBackground:        $white;
+$textColor:             $grayDark;
+
+// Links
+// ===================================================================
+$linkColor:             $pink;
+$linkColorHover:        darken($linkColor, 15%);
+
+// Typography
+// ===================================================================
+$sansFF: 				"Helvetica Neue", Helvetica, Arial, sans-serif;
+$serifFF: 				serif;
+
+$baseFF: 				$sansFF;
+$baseFZ:				14px;
+$baseLH:				24px;
