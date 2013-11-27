@@ -25,15 +25,14 @@ app.configure(function(){
   app.use(express.cookieParser('brand-new-secret-key'));
   app.use(express.session());
   app.use(app.router);
+  app.use(express.static(path.join(__dirname, 'public')));
 });
 
 app.configure('development', function(){
-  app.use(express.static(path.join(__dirname, 'public')));
   app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 });
 
 app.configure('production', function(){
-  app.use(express.static(path.join(__dirname, 'dist')));
   app.use(express.errorHandler());
 });
 

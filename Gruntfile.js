@@ -4,21 +4,24 @@ module.exports = function(grunt) {
   grunt.initConfig({
     watch: {
       compass: {
-        files: ['./public/sass/**/*.{scss,sass}'],
+        files: ['./dev/sass/**/*.{scss,sass}'],
         tasks: ['compass:dev']
       },
       livereload: {
-        files: ['./public/css/*'],
+        files: [
+          './public/js/*',
+          './public/css/*'
+        ],
         options: {
           livereload: true
         }
       }
     },
 
-   compass: {
+    compass: {
       dev: {
         options: {
-          config: './public/config.rb',
+          config: './dev/config.rb',
           force: true,
           cssDir: './public/css'
         }
@@ -26,24 +29,15 @@ module.exports = function(grunt) {
 
       dist: {
         options: {
-          config: './public/config.rb',
+          config: './dev/config.rb',
           force: true,
           outputStyle: 'compressed'
         }
       }
     },
 
-    uglify: {
-      build: {
-        files: {
-          './public/js/build.js': ['./public/js/*.js']
-        }
-      }
-    },
-
     nodemon: {
       dev: {
-        tasks: ['nodemon', 'watch'],
         options: {
           file: 'server.js',
           logConcurrentOutput: true
@@ -51,10 +45,25 @@ module.exports = function(grunt) {
       }
     },
 
+    watchify: {
+      dev: {
+        src: './dev/js/**/*.js',
+        dest: './public/js/main.js'
+      }
+    },
+
     concurrent: {
-      server: ['nodemon', 'watch'],
+      server: ['watchify:dev:keepalive', 'watch', 'nodemon'],
       options: {
         logConcurrentOutput: true
+      }
+    },
+
+    uglify: {
+      build: {
+        files: {
+          './public/js/main.js': ['./public/js/*.js']
+        }
       }
     },
 
@@ -80,6 +89,7 @@ module.exports = function(grunt) {
   grunt.registerTask('default', [
     'concurrent:server'
   ]);
+
   grunt.registerTask('dist', [
     'compass:dist',
     'uglify',

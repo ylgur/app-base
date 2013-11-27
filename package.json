@@ -24,6 +24,8 @@
     "grunt-contrib-uglify": "*",
     "nodemon": "*",
     "grunt-nodemon": "*",
-    "grunt-concurrent": "*"
+    "grunt-concurrent": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-watchify": "*"
   }
 }
