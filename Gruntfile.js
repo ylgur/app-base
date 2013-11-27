@@ -19,7 +19,8 @@ module.exports = function(grunt) {
       dev: {
         options: {
           config: './public/config.rb',
-          force: true
+          force: true,
+          cssDir: './public/css'
         }
       },
 
@@ -37,6 +38,23 @@ module.exports = function(grunt) {
         files: {
           './public/js/build.js': ['./public/js/*.js']
         }
+      }
+    },
+
+    nodemon: {
+      dev: {
+        tasks: ['nodemon', 'watch'],
+        options: {
+          file: 'server.js',
+          logConcurrentOutput: true
+        }
+      }
+    },
+
+    concurrent: {
+      server: ['nodemon', 'watch'],
+      options: {
+        logConcurrentOutput: true
       }
     },
 
@@ -59,7 +77,9 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('default', ['watch']);
+  grunt.registerTask('default', [
+    'concurrent:server'
+  ]);
   grunt.registerTask('dist', [
     'compass:dist',
     'uglify',

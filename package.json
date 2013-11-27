@@ -21,6 +21,9 @@
     "grunt-contrib-livereload": "*",
     "grunt-contrib-imagemin": "*",
     "grunt-svgmin": "*",
-    "grunt-contrib-uglify": "*"
+    "grunt-contrib-uglify": "*",
+    "nodemon": "*",
+    "grunt-nodemon": "*",
+    "grunt-concurrent": "*"
   }
 }

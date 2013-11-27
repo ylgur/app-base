@@ -1,10 +1,10 @@
 require "susy"
 
-css_dir = "css"
-sass_dir = "sass"
-images_dir = "img"
-javascripts_dir = "js"
-fonts_dir = "fonts"
+css_dir = "public/css"
+sass_dir = "public/sass"
+images_dir = "public/img"
+javascripts_dir = "public/js"
+fonts_dir = "public/fonts"
 
 output_style = :expanded
 
