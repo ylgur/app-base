@@ -9,6 +9,10 @@
     "email": "ragnar.valgeirsson@gmail.com",
     "url": "http://rthor.is"
   },
+  "dependencies": {
+    "express": "*",
+    "jade": "*"
+  },
   "devDependencies": {
     "grunt": "*",
     "grunt-contrib-compass": "*",
