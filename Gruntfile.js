@@ -4,11 +4,11 @@ module.exports = function(grunt) {
   grunt.initConfig({
     watch: {
       compass: {
-        files: ['sass/**/*.{scss,sass}'],
+        files: ['./public/sass/**/*.{scss,sass}'],
         tasks: ['compass:dev']
       },
       livereload: {
-        files: ['css/*'],
+        files: ['./public/css/*'],
         options: {
           livereload: true
         }
@@ -18,14 +18,14 @@ module.exports = function(grunt) {
    compass: {
       dev: {
         options: {
-          config: 'config.rb',
+          config: './public/config.rb',
           force: true
         }
       },
 
       dist: {
         options: {
-          config: 'config.rb',
+          config: './public/config.rb',
           force: true,
           outputStyle: 'compressed'
         }
@@ -35,7 +35,7 @@ module.exports = function(grunt) {
     uglify: {
       build: {
         files: {
-          'js/build.js': ['js/*.js']
+          './public/js/build.js': ['./public/js/*.js']
         }
       }
     },
@@ -44,7 +44,7 @@ module.exports = function(grunt) {
       dist: {
         files: [{
           expand: true,
-          src: 'img/{,*/}*.{png,jpg,jpeg}'
+          src: './public/img/{,*/}*.{png,jpg,jpeg}'
         }]
       }
     },
@@ -53,7 +53,7 @@ module.exports = function(grunt) {
       dist: {
         files: [{
           expand: true,
-          src: 'img/{,*/}*.svg'
+          src: './public/img/{,*/}*.svg'
         }]
       }
     }
