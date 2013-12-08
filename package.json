@@ -14,7 +14,7 @@
     "jade": "*"
   },
   "devDependencies": {
-    "grunt": "*",
+    "grunt-cli": "*",
     "grunt-contrib-compass": "*",
     "grunt-contrib-watch": "*",
     "matchdep": "*",
